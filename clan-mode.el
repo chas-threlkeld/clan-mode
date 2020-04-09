@@ -551,7 +551,7 @@
 (local-set-key (kbd "<f2> \"") 'insert-close-quote)
 
   
-  (local-set-key (kbd "C-c l") 'playline)
+  (local-set-key (kbd "C-c l") 'play-line)
   (local-set-key (kbd "C-c o") 'insert-bullet)
   (local-set-key (kbd "C-c p") 'play-from-line)
   (local-set-key (kbd "C-c s") 'stop-player)
