@@ -96,14 +96,14 @@
 (defvar clan-font-lock-keywords
       (let* (
 	    (x-params-regexp "^@[A-Z]D?[a-z]*:?")
-	    (x-speaker-regexp "^\*...:")
+	    (x-independent-regexp "^\*[A-Z]\{3\}:\t")
 	    (x-timestamps-regexp "•[0-9]*_.[0-9]*•")
-	    (x-tag-regexp "^%[a-zA-Z]*:"))
+	    (x-dependent-regexp "^%[a-z]\{3\}*:\t"))
         `(
 	  (,x-params-regexp . font-lock-type-face)
-	  (,x-speaker-regexp . font-lock-constant-face)
+	  (,x-independent-regexp . font-lock-constant-face)
 	  (,x-timestamps-regexp . font-lock-builtin-face)
-	  (,x-tag-regexp . font-lock-comment-face)
+	  (,x-dependent-regexp . font-lock-comment-face)
           ;; note: order above matters, because once colored, that part won't change.
           ;; in general, put longer words first
           )))
