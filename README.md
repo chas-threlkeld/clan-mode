@@ -1,15 +1,16 @@
 
 # Table of Contents
 
-1.  [Installation](#orgde578c5)
-2.  [Features](#org5ec6d1b)
-    1.  [Syntax highlighting](#org05126ac)
-    2.  [Special Character Insertion](#orgd3b97cc)
-    3.  [Audio Playback](#org0f2ef23)
-        1.  [Shortcuts](#orga42639d)
+1.  [Installation](#orgbfc52c0)
+2.  [Features](#org5f94ae5)
+    1.  [Syntax highlighting](#orgad84104)
+    2.  [Special Character Insertion](#org69ad36b)
+    3.  [Audio Playback](#org51c23a6)
+        1.  [Shortcuts](#org8c9c265)
+3.  [More Information](#org70b5368)
 
 
-<a id="orgde578c5"></a>
+<a id="orgbfc52c0"></a>
 
 # Installation
 
@@ -25,19 +26,19 @@ The first line installs clan-mode. The second line auto-loads `clan-mode` when y
 Then, either `eval-buffer` your `init.el` or restart Emacs for the changes to take effect.
 
 
-<a id="org5ec6d1b"></a>
+<a id="org5f94ae5"></a>
 
 # Features
 
 
-<a id="org05126ac"></a>
+<a id="orgad84104"></a>
 
 ## Syntax highlighting
 
 `clan-mode` supports header syntax highlighting for `@Item` headers. It highlights speakers of the form `*Name:` and it highlights the timestamps in `•12345_67890•`.
 
 
-<a id="orgd3b97cc"></a>
+<a id="org69ad36b"></a>
 
 ## Special Character Insertion
 
@@ -52,7 +53,7 @@ To ensure that these symbols load properly, you can use [CAFont](http://dali.tal
 where 14 is the size that you prefer. Alternatively, use `M-x set-frame-font`.
 
 
-<a id="org0f2ef23"></a>
+<a id="org51c23a6"></a>
 
 ## Audio Playback
 
@@ -61,11 +62,18 @@ where 14 is the size that you prefer. Alternatively, use `M-x set-frame-font`.
 The audio is linked to the file specified by the `@Media` tag in the clan file. 
 
 
-<a id="orga42639d"></a>
+<a id="org8c9c265"></a>
 
 ### Shortcuts
 
 -   `C-c l` Plays the section of the audio file between the timestamps of turn at the point.
 -   `C-c p` Plays the audio file beginning at the start of the turn at the point.
 -   `C-c s` Stops any audio playing.
+
+
+<a id="org70b5368"></a>
+
+# More Information
+
+The CLAN manual can be found [here](https://talkbank.org/manuals/CLAN.pdf). A guide to CLAN can be found [here](https://talkbank.org/manuals/Clin-CLAN.pdf). While `clan-mode` does not implement all of these features, they are the standard sources for the `.cha` schema.
 
