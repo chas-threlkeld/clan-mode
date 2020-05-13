@@ -96,12 +96,14 @@
 (defvar clan-font-lock-keywords
       (let* (
 	    (x-params-regexp "^@[A-Z]D?[a-z]*:?")
-	    (x-independent-regexp "^\*[A-Z]\{3\}:\t")
+	    (x-independent-regexp "^\*[A-Z0-9]*:")
+	    (x-pause-regexp "([0-9]+\.[0-9]+)")
 	    (x-timestamps-regexp "•[0-9]*_.[0-9]*•")
-	    (x-dependent-regexp "^%[a-z]\{3\}*:\t"))
+	    (x-dependent-regexp "^%[a-z]\\{3\\}:[[:space:]].*"))
         `(
 	  (,x-params-regexp . font-lock-type-face)
 	  (,x-independent-regexp . font-lock-constant-face)
+	  (,x-pause-regexp . font-lock-string-face)
 	  (,x-timestamps-regexp . font-lock-builtin-face)
 	  (,x-dependent-regexp . font-lock-comment-face)
           ;; note: order above matters, because once colored, that part won't change.
